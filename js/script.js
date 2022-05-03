@@ -35,11 +35,17 @@ const app= new Vue({
     methods:{
         prevPic(){
             this.counterPic++;
+            if (this.counterPic>this.slides.length) {
+                this.counterPic=0;
+            }
             console.log(this.counterPic);
         },
 
         nextPic(){
             this.counterPic--;
+            if (this.counterPic<0) {
+                this.counterPic=this.slides.length;
+            }
             console.log(this.counterPic);
         }
     }
