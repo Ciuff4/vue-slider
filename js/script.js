@@ -28,7 +28,20 @@ const app= new Vue({
                 title: 'Paradise',
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
-        ]
+        ],
+        counterPic:0,
     },
+
+    methods:{
+        prevPic(){
+            this.counterPic++;
+            console.log(this.counterPic);
+        },
+
+        nextPic(){
+            this.counterPic--;
+            console.log(this.counterPic);
+        }
+    }
 })
 
