@@ -30,24 +30,36 @@ const app= new Vue({
             }
         ],
         counterPic:0,
+        isActive: false,
+        activeClass: "active",
     },
 
     methods:{
         prevPic(){
             this.counterPic++;
-            if (this.counterPic>this.slides.length) {
+            if (this.counterPic>this.slides.length-1) {
                 this.counterPic=0;
-            }
+            };
             console.log(this.counterPic);
         },
 
         nextPic(){
             this.counterPic--;
             if (this.counterPic<0) {
-                this.counterPic=this.slides.length;
-            }
+                this.counterPic=this.slides.length-1;
+            };
             console.log(this.counterPic);
-        }
+        },
+
+        /*activeSlide(){
+            for(this.slide, key of this.slides) {
+                if (this.counterPic===this.slides[key]) {
+                    this.isActive===true
+                    console.log(this.slides[key]);
+                }
+            }
+
+        }*/
     }
 })
 
