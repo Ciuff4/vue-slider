@@ -30,8 +30,9 @@
                     <div @click="prevPic" class="prev"></div>
                     <div @click="nextPic" class="next"></div>
                     <div 
-                    v-for="(slide, key) in slides"
-                    :class="(slides[counterPic]===)"
+                    v-for="(slide , index) in slides"
+                    @click="counterPic=index"
+                    :class="(slides[index]===slides[counterPic]) ? 'active' : '' "
                     class="thumb">
                         <img :src="slide.image" :alt="slide.title"/>
                     </div>

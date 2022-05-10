@@ -30,8 +30,6 @@ const app= new Vue({
             }
         ],
         counterPic:0,
-        isActive: false,
-        activeClass: "active",
     },
 
     methods:{
@@ -49,17 +47,8 @@ const app= new Vue({
                 this.counterPic=this.slides.length-1;
             };
             console.log(this.counterPic);
-        },
-
-        /*activeSlide(){
-            for(this.slide, key of this.slides) {
-                if (this.counterPic===this.slides[key]) {
-                    this.isActive===true
-                    console.log(this.slides[key]);
-                }
-            }
-
-        }*/
+            
+        }
     }
 })
 
